@@ -8,7 +8,7 @@
 
 .metadata
 .packages
-
+.dart_tool
 
 # BlueJ files
 *.ctxt
