@@ -6,6 +6,10 @@
 # Log file
 *.log
 
+.metadata
+.packages
+
+
 # BlueJ files
 *.ctxt
 
