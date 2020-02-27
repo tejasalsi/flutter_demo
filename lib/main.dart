@@ -22,14 +22,48 @@ class MyApp extends StatelessWidget {
           child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text('Hello world!'),
                 Image.asset('assets/images/logo.png',
-                    height: 100, fit: BoxFit.fill)
+                    height: 100, fit: BoxFit.fill),
+                Counter()
               ]
           )
         ),
     ));
   }
-// #enddocregion build
+
+
+  }
+  class Counter extends StatefulWidget {
+  @override
+  State<StatefulWidget> createState() {
+    // TODO: implement createState
+    return _CounterState();
+  }
+
+
+  }
+  class _CounterState extends State {
+    int _counter = 0;
+    @override
+  Widget build(BuildContext context) {
+    // TODO: implement build
+    return Row(
+      children: <Widget>[
+        RaisedButton(
+          onPressed: _incrementNumber,
+          child: Text('Increment'),
+        ),
+        Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Text('Count: $_counter'),
+        ),
+      ],
+    );
+  }
+  void _incrementNumber() {
+      setState(() {
+    _counter++;
+
+      });
+  }
 }
-// #enddocregion MyApp
